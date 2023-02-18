@@ -1,5 +1,5 @@
 # summary/resume/rangkuman
-## Introduction FE
+## (04) Introduction FE
 
 ### • Apa itu front-end developer?
 Merupakan seseorang developer yang menangani bagian yang terlihat pada client side. Contoh kemampuan yang diperlukan seorang front-end adalah HTML, CSS, javascript.
