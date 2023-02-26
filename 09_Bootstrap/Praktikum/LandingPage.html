@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Bootstrap demo</title>
+    <!-- Link Bootstrap -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD"
+      crossorigin="anonymous"
+    />
+    <!-- Link css -->
+    <link rel="stylesheet" href="/09_Bootstrap/Praktikum/assets/css/style.css" />
+    <!-- Link font -->
+  </head>
+  <body>
+      <!-- Navigation Bar -->
+      <nav class="navbar navbar-expand-lg shadow-sm">
+        <div class="container-fluid">
+          <a class="navbar-brand ms-4" href="/09_Bootstrap/Praktikum/LandingPage.html" style="font-weight: bolder;">Simple Header</a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+            <ul class="navbar-nav me-4">
+              <li class="nav-item me-3">
+                <a class="nav-link active text-white" style="background-color: #0D6EFD; border-radius: 4px;" aria-current="page" href="#">Home</a>
+              </li>
+              <li class="nav-item me-3">
+                <a class="nav-link active text-primary" aria-current="page" href="#">Feature</a>
+              </li>
+              <li class="nav-item me-3">
+                <a class="nav-link active text-primary" aria-current="page" href="#">Pricing</a>
+              </li>
+              <li class="nav-item me-3">
+                <a class="nav-link active text-primary" aria-current="page" href="#">FAQs</a>
+              </li>
+              <li class="nav-item me-3">
+                <a class="nav-link active text-primary" aria-current="page" href="#">About</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+      <!-- Hero Section -->
+      <section class="d-flex" style="background-color: #37517E;">
+        <div class="container">
+          <div class="row">
+              <div class="col-lg-6 d-flex flex-column justify-content-center pt-4 pt-lg-0 order-2 order-lg-1">
+                <h1 class="text-white" style="font-weight: bold; font-size: 48px;">Better Solutions For Your Business</h1>
+                <h2 class="text-white-50" style="font-size: medium;">We are team of talented designers making websites with Bootstrap</h2>
+                <div class="row d-flex justify-content-lg-start justify-content-center mb-5">
+                  <a href="/09_Bootstrap/Praktikum/CreateAccount.html" class="btn text-white mt-5" style="background-color: #47B2E4; border-radius: 50px; height: 45px; width: 147.36px;">Get Started</a>
+                  <a href="#" class="btn text-white mt-5" style="height: 45px; width: 147.36px;">Watch Video</a>
+                </div>
+              </div>
+              <div class="col-lg-6 order-1 order-lg-2 hero-img">
+                <img src="/09_Bootstrap/Praktikum/assets/img/hero-img.png" alt="hero-img">
+              </div>
+            </div>
+        </div>  
+      </section>
+    
+    <!-- Main form Create Product  -->
+    <section class="main-form d-flex justify-content-center pt-5 pb-5" style="background-color: #F3F5FA;">
+      <div class="container">
+        <div class="row">
+            <div class="text-center">
+                <h3 style="color: #37517E;font-size: 24px;">Join Our Newsletter</h3>
+                <p style="color:#444444">Lorem ipsum dolor sit amet consectetur, adipisicing elit. In rerum amet fuga!</p>
+            </div>
+            <form id="form1" class="text-center" action="/09_Bootstrap/Praktikum/CreateAccount.html">
+              <div class="input-group mb-3 mt-2">
+                <input type="email" class="form-control" style="border-left: 15px;" aria-describedby="button-addon2">
+                <button class="btn text-white" style="background-color: #47B2E4; border-right: 15px;" type="submit" id="button-addon2" >Subscribe</button>
+              </div>
+            </form>
+          </div>
+      </div>  
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer-top pt-5">
+      <div class="container">
+        <div class="row">
+
+          <div class="col-lg-3 col-md-6 footer-contact">
+            <h3 style="color: #37517E;font-weight: bold;">Arsha</h3>
+            <p>
+              A108 Adam Street <br>
+              New York, NY 535022<br>
+              United States <br><br>
+              <strong>Phone:</strong> +1 5589 55488 55<br>
+              <strong>Email:</strong> info@example.com<br>
+            </p>
+          </div>
+
+          <div class="col-lg-3 col-md-6 footer-links">
+            <h4 style="color: #37517E;font-weight: bold;">Useful Links</h4>
+            <ul class="list-unstyled ps-3">
+              <li>Home</li>
+              <li>About Us</li>
+              <li>Services</li>
+              <li>Terms of service</li>
+              <li>Privacy policy</li>
+            </ul>
+          </div>
+
+          <div class="col-lg-3 col-md-6 footer-links">
+            <h4 style="color: #37517E;font-weight: bold;">Our Services</h4>
+            <ul class="list-unstyled ps-3">
+              <li>Web Design</li>
+              <li>Web Development</li>
+              <li>Product Management</li>
+              <li>Marketing</li>
+              <li>Graphic Design</li>
+            </ul>
+          </div>
+
+          <div class="col-lg-3 col-md-6 footer-links">
+            <h4 style="color: #37517E;font-weight: bold;">Our Social Networks</h4>
+            <p>Cras fermentum odio eu feugiat lide par naso tierra videa magna derita valies</p>
+            <div class="social-links mt-3">
+              <img src="/09_Bootstrap/Praktikum/assets/img/a.png" alt="instagram">
+              <img src="/09_Bootstrap/Praktikum/assets/img/a.png" alt="twitter">
+              <img src="/09_Bootstrap/Praktikum/assets/img/a.png" alt="facebook">
+              <img src="/09_Bootstrap/Praktikum/assets/img/a.png" alt="youtube">
+              <img src="/09_Bootstrap/Praktikum/assets/img/a.png" alt="linkedin">
+            </div>
+          </div>
+
+        </div>
+      </div>
+      
+    </footer>
+    
+    <!-- Copyright -->
+    <div class="footer-bottom pt-4 pb-4" style="background-color: #37517E;">
+      <div class="container">
+        <div class="row">
+          <div class="copyright col-6 text-white text-start">
+            &copy; Copyright <strong><span>Arsha</span></strong>. All Rights Reserved
+          </div>
+          <div class="credits col-6 text-white text-end">
+            Designed by <a href="https://bootstrapmade.com/" style="text-decoration: none;">BootstrapMade</a>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>

@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Bootstrap demo</title>
+    <!-- Link Bootstrap -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD"
+      crossorigin="anonymous"
+    />
+    <!-- Link css -->
+    <link rel="stylesheet" href="style.css" />
+    <!-- Link font -->
+  </head>
+  <body>
+    <!-- Navigation Bar -->
+    <nav class="navbar navbar-expand-lg shadow-sm">
+      <div class="container-fluid">
+        <a class="navbar-brand ms-4" href="/09_Bootstrap/Praktikum/LandingPage.html" style="font-weight: bolder;">Simple Header</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+          <ul class="navbar-nav me-4">
+            <li class="nav-item me-3">
+                <a class="nav-link active text-white" style="background-color: #0D6EFD; border-radius: 4px;" aria-current="page" href="#">Home</a>
+            </li>
+            <li class="nav-item me-3">
+              <a class="nav-link active text-primary" aria-current="page" href="#">Feature</a>
+            </li>
+            <li class="nav-item me-3">
+              <a class="nav-link active text-primary" aria-current="page" href="#">Pricing</a>
+            </li>
+            <li class="nav-item me-3">
+              <a class="nav-link active text-primary" aria-current="page" href="#">FAQs</a>
+            </li>
+            <li class="nav-item me-3">
+              <a class="nav-link active text-primary" aria-current="page" href="#">About</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <!-- Create Product Title -->
+    <div class="container text-center pt-5">
+        <div>
+            <img src="/09_Bootstrap/Praktikum/assets/img/bootstrap-logo.png" alt="bootstrap-logo">
+        </div>
+        <div>
+          <h1>Create Product</h1>
+          <p>Below is an example form built entirely with Bootstraps form controls. Each required form group has a validation state that can be triggered by attempting to submit the form without completing it.</p>
+        </div>
+        <section class="pb-4 pt-3">
+          <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="true">
+            <div class="carousel-indicators">
+              <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+              <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+              <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+            </div>
+            <div class="carousel-inner">
+              <div class="carousel-item active">
+                <img src="/09_Bootstrap/Praktikum/assets/img/wallhaven-q22v3r.jpg" class="d-block w-100" alt="wall1">
+              </div>
+              <div class="carousel-item">
+                <img src="/09_Bootstrap/Praktikum/assets/img/wallhaven-q26ogl.jpg" class="d-block w-100" alt="wall2">
+              </div>
+              <div class="carousel-item">
+                <img src="/09_Bootstrap/Praktikum/assets/img/wallhaven-x8183o.png" class="d-block w-100" alt="wall3">
+              </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+              <span class="carousel-control-next-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Next</span>
+            </button>
+          </div>
+        </section>
+    </div>
+    <!-- Main form Create Product  -->
+    <section class="row container mx-auto w-75 pb-5">
+      <h2>Detail Product</h2>
+      <form action="/09_Bootstrap/Praktikum/LandingPage.html" class="needs-validation" novalidate>
+        <div class="col-12 mb-3">
+          <label for="productname" class="form-label">Product Name</label>
+          <input type="text" class="form-control" id="productname" required maxlength="50" minlength="6">
+          <div class="valid-feedback">Sudah Terisi!</div>
+          <div class="invalid-feedback" id="validationServerUsernameFeedback">Isi Product Name!(minimal 6 huruf)</div>
+        </div>
+        <div class="col-12 mb-3">
+          <label for="productcategory" class="form-label">Product Category</label>
+          <select class="form-select">
+            <option selected>Choose...</option>
+            <option value="Product1">Product 1</option>
+            <option value="Product2">Product 2</option>
+          </select>
+          <div class="valid-feedback">Sudah Terisi!</div>
+        </div>
+        <div class="col-12 mb-3 custom-file-button">
+          <label for="formFile" class="form-label">Image Of Product</label>
+          <input class="form-control" type="file" id="formFile" style="color: #0D6EFD;">
+        </div>
+        <div class="col-12 mb-3">
+          <label for="formRadio" class="form-label">Product Freshness</label>
+          <div class="form-check">
+            <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
+            <label class="form-check-label" for="flexRadioDefault1">
+              Brand New
+            </label>
+          </div>
+          <div class="form-check">
+            <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2">
+            <label class="form-check-label" for="flexRadioDefault2">
+              Second Hand
+            </label>
+          </div>
+          <div class="form-check">
+            <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault3">
+            <label class="form-check-label" for="flexRadioDefault3">
+              Refurbisned
+            </label>
+          </div>
+        </div>
+        <div class="col-12 mb-3">
+          <label for="formDesc" class="form-label">Additional Description</label>
+          <textarea class="form-control" placeholder="Leave a comment here" id="floatingTextarea"></textarea>
+          
+        </div>
+        <div class="col-12 mb-3">
+          <label for="formPrice" class="form-label">Product Price</label>
+          <div class="input-group">
+            <div class="input-group-prepend">
+                <span class="input-group-text">$</span>
+            </div>
+            <input type="number" class="form-control" placeholder="1" />
+          </div>
+        </div>
+        <div class="mt-5 text-center">
+          <button type="submit" class="btn btn-primary" style="width: 557px;">Submit</button>
+        </div>
+      </form>
+    </section>
+
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
+      crossorigin="anonymous"
+    ></script>
+    <script src="/09_Bootstrap/Praktikum/assets/js/validation.js"></script>
+  </body>
+</html>
