@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <!-- My CSS -->
+    <!-- Icon Font Stylesheet -->
+    <!-- Title -->
+    <title>MOON WAR</title>
+  </head>
+  <body>
+    <h1>Create Product</h1>
+    <h2>Detail Product</h2>
+    <!-- Form -->
+    <form id="usrform" style="margin: top 5px;" action="landingPage.html">
+        <!-- Product Name -->
+        <label for="fname">Product Name :</label><br>
+        <input type="text" id="fname" name="fname" minlength="6" maxlength="50" required><br>
+        <!-- Product Category -->
+        <label for="cars">Product Category :</label><br>
+        <select id="cars" name="cars" required>
+            <option value="     ">     </option>
+            <option value="Mazda">Mazda</option>
+            <option value="Nissan">Nissan</option>
+            <option value="Mitshubishi">Mitshubishi</option>
+            <option value="Toyota">Toyota</option>
+        </select><br>
+        <!-- Product Freshness -->
+        <label for="product_freshness">Product Freshness :</label><br>    
+        <input type="radio" id="brand_new" name="product_freshness" value="Brand New" required>
+        <label for="brand_new">Brand New</label><br>
+        <input type="radio" id="second_hank" name="product_freshness" value="Second Hank">
+        <label for="second_hank">Second Hank</label><br>
+        <input type="radio" id="refurbished" name="product_freshness" value="Refurbished">
+        <label for="refurbished">Refurbished</label><br>
+        <!-- File Input -->
+        <label for="image">Image of Product </label>
+        <input type="file" name="image" id="image"><br>
+        <!-- Text area description -->
+        <label for="desc">Additional Description</label><br>
+        <textarea rows="8" cols="34" name="desc" required></textarea><br>
+        <!-- Product Price -->
+        <label for="price">Product price :</label><br>
+        <label for="price">$</label>
+        <input type="number" id="price" name="price" placeholder="100" required min="100"><br>
+        <!-- Submit -->
+        <input type="submit" style="margin-top: 8px;">
+    </form>
+    <!-- Akhir Form -->
+
+    <!-- Footer -->
+    <footer>
+      <!-- Copyright -->
+      <div class="text-center p-3" style="margin-top: 10px;">
+        © 2023 Copyright:
+        <a class="text-white fw-bold" href="https://instagram.com/norman_jayap?igshid=YmMyMTA2M2Y=">Norman Jayaperlaga</a>
+      </div>
+    </footer>
+  <!-- Akhir Footer -->
+
+  </body>
+</html>
