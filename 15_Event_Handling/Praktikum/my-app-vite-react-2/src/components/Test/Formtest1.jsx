@@ -3,10 +3,30 @@ import RandomNumber from "../RandomNumber/RandomNumber";
 
 const Formtest1 = () => {
   const [PName, setPName] = useState("");
+  const [PCategory, setPCategory] = useState("Choose");
+  const [PImage, setPImage] = useState("");
+  const [formDesc, setformDesc] = useState("");
+  const [PPrice, setPPrice] = useState("");
 
   const handlePName = (event) => {
     const inputName = event.target.value;
-      setPName(inputName);
+    setPName(inputName);
+  };
+  const handlePCategory = (event) => {
+    const inputCategory = event.target.value;
+    setPCategory(inputCategory);
+  };
+  const handlePImage = (event) => {
+    const inputImage = event.target.value;
+    setPImage(inputImage);
+  };
+  const handleformDesc = (event) => {
+    const inputformDesc = event.target.value;
+    setformDesc(inputformDesc);
+  };
+  const handlePPrice = (event) => {
+    const inputPrice = event.target.value;
+    setPPrice(inputPrice);
   };
 
   return (
@@ -28,47 +48,74 @@ const Formtest1 = () => {
               value={PName}
               onChange={handlePName}
               required
+              style={{
+                borderColor:
+                  PName.length < 5 || PName.length > 10 ? "red" : "green",
+              }}
             />
-            {PName.length <= 10 && (
+            {PName.length < 5 && (
+              <div style={{ color: "red" }}>
+                Product name must be at least 5 characters
+              </div>
+            )}
+            {PName.length >= 5 && PName.length <= 10 && (
               <div style={{ color: "green" }}>
-                Product name has {PName.length} character
+                Product name has {PName.length} characters
               </div>
             )}
             {PName.length > 10 && (
               <div style={{ color: "red" }}>
-                Product name must not exceed 10 character
+                Product name must not exceed 10 characters
               </div>
             )}
-            <span id="name-error" className="text-danger" />
-            <span id="name-success" className="text-success" />
           </div>
           <div className="mb-3">
             <label htmlFor="PCategory" className="form-category" id="selector">
               Product Category:
             </label>
-            <select className="form-select" id="PCategory" required>
-              <option
-                disabled=""
-                selected=""
-                value=""
-                style={{ display: "none" }}
-              >
+            <select
+              className="form-select"
+              id="PCategory"
+              required
+              value={PCategory}
+              onChange={handlePCategory}
+              style={{ borderColor: PCategory === "Choose" ? "red" : "green" }}
+            >
+              <option disabled="" value="" style={{ display: "none" }}>
                 {" "}
                 -- Choose --{" "}
               </option>
               <option value="Product Organic">Product Organic</option>
               <option value="Product Non-Organic">Product Non-Organic</option>
             </select>
-            <span id="category-error" className="text-danger" />
-            <span id="category-success" className="text-success" />
+            {PCategory === "Choose" && (
+              <div style={{ color: "red" }}>Please Choose product Category</div>
+            )}
+            {PCategory != "Choose" && (
+              <div style={{ color: "green" }}>
+                product Category has Selected
+              </div>
+            )}
           </div>
           <div className="mb-3 custom-file-button">
             <label htmlFor="PImage" className="form-file">
               Image Of Product
             </label>
-            <input className="form-control" type="file" id="PImage" />
-            <span id="image-error" className="text-danger" />
-            <span id="image-success" className="text-success" />
+            <input
+              className="form-control"
+              type="file"
+              id="PImage"
+              value={PImage}
+              onChange={handlePImage}
+              style={{
+                borderColor: PImage.length === 0 ? "red" : "green",
+              }}
+            />
+            {PImage ? (
+              <div style={{ color: "green" }}>Product Image selected</div>
+            ) : (
+              <div style={{ color: "red" }}>Please choose Product Image!</div>
+            )}
           </div>
           <div className="mb-3">
             <label htmlFor="formRadio" className="form-radio">
@@ -122,10 +169,29 @@ const Formtest1 = () => {
               placeholder="Leave a comment here"
               id="formDesc"
               defaultValue={""}
+              value={formDesc}
+              onChange={handleformDesc}
               required
+              style={{
+                borderColor:
+                  formDesc.length < 5 || formDesc.length > 35 ? "red" : "green",
+              }}
             />
-            <span id="desc-error" className="text-danger" />
-            <span id="desc-success" className="text-success" />
+            {formDesc.length < 5 && (
+              <div style={{ color: "red" }}>
+                Product name must be at least 5 characters
+              </div>
+            )}
+            {formDesc.length >= 5 && formDesc.length <= 35 && (
+              <div style={{ color: "green" }}>
+                Product name has {formDesc.length} characters
+              </div>
+            )}
+            {formDesc.length > 35 && (
+              <div style={{ color: "red" }}>
+                Product name must not exceed 20 characters
+              </div>
+            )}
           </div>
           <div className="mb-3">
             <label htmlFor="PPrice" className="form-label">
@@ -140,10 +206,16 @@ const Formtest1 = () => {
                 className="form-control"
                 id="PPrice"
                 placeholder={1}
+                value={PPrice}
+                onChange={handlePPrice}
+                style={{
+                  borderColor: PPrice === "" ? "red" : "green",
+                }}
               />
             </div>
-            <span id="price-error" className="text-danger" />
-            <span id="price-success" className="text-success" />
+            {PPrice === "" && (
+              <div style={{ color: "red" }}>Product Price still empty</div>
+            )}
           </div>
           <div className="mt-5 text-center">
             <button
