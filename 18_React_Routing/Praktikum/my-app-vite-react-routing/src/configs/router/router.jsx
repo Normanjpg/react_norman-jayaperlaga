@@ -1,21 +1,21 @@
-import React from "react";
-import EditProduct from "../../components/TableList/EditProduct";
-import CreateProduct from "../../pages/CreateProduct";
-import LandingPage from "../../pages/LandingPage";
+// import React from "react";
+// import EditProduct from "../../pages/EditProduct";
+// import CreateProduct from "../../pages/CreateProduct";
+// import LandingPage from "../../pages/LandingPage";
 
-const router = [
-  {
-    path: "/",
-    element: <LandingPage/>,
-  },
-  {
-    path: "/CreateProduct",
-    element: <CreateProduct />,
-  },
-  {
-    path: "/edit/:id",
-    element: <EditProduct/>
-  }
-];
+// const router = [
+//   {
+//     path: "/",
+//     element: <LandingPage/>,
+//   },
+//   {
+//     path: "/CreateProduct",
+//     element: <CreateProduct/>,
+//   },
+//   {
+//     path: "/edit/:id",
+//     element: <EditProduct/>
+//   }
+// ];
 
-export default router;
+// export default router;

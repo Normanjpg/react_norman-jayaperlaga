@@ -6,7 +6,7 @@ import TableList from "../components/TableList/TableList";
 import RandomNumber from "../components/RandomNumber/RandomNumber";
 import uuid from "react-uuid"
 
-function CreateProduct() {
+function CreateProduct({isSubmit, setSubmit}) {
   useEffect(() => {
     return () => {
       alert('Welcome Norman')
@@ -18,7 +18,7 @@ function CreateProduct() {
   const [isproductImage, setproductImage] = useState("");
   const [isproductDesc, setproductDesc] = useState("");
   const [isproductPrice, setproductPrice] = useState("");
-  const [isSubmit, setSubmit] = useState([]);
+  // const [isSubmit, setSubmit] = useState([]);
 
   function ProductNameFunction(e) {
     const handleProductName = e.target.value;
@@ -75,12 +75,6 @@ function CreateProduct() {
       deleteProduct.splice(index, 1);
       setSubmit(deleteProduct);
     }
-  }
-
-  function handleNewPageDataFunction(index) {
-    const newPageTable = [...handleDeleteFunction]
-    newPageTable.splice(index, 1);
-
   }
 
   return (

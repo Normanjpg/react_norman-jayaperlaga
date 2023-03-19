@@ -19,11 +19,12 @@ const TableList = ({ productData, onDelete }) => {
               <th scope="col">Additional Description</th>
               <th scope="col">Product Price ($)</th>
               <th scope="col">Action</th>
+              <th scope="col">Show</th>
             </tr>
             {productData.map((products, index) => {
               return (
                 <tr key={products.id}>
-                  <td scope="col">{index + 1}</td>
+                  <td scope="col">{products.id}</td>
                   <td scope="col">{products.name}</td>
                   <td scope="col">{products.category}</td>
                   <td scope="col">{products.image}</td>
@@ -39,9 +40,10 @@ const TableList = ({ productData, onDelete }) => {
                     >
                       Delete
                     </button>
-                    <Link to={{pathname: '/edit/${products.id}', state: {product:products}}} className="btn btn-success m-2" onClick={() => {}}>
-                      Edit
-                    </Link>
+                    <button className="btn btn-success m-2">Edit</button>
+                  </td>
+                  <td scope="col">
+                    <Link to={`/Product/${index + 1}`}>View {index + 1}</Link>
                   </td>
                 </tr>
               );

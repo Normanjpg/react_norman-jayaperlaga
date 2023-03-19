@@ -2,28 +2,22 @@ import { useState } from "react";
 import reactLogo from "./assets/react.svg";
 import "./App.css";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
-import router from "./configs/router/router";
-import EditProduct from "./components/TableList/EditProduct";
+import LandingPage from "./pages/LandingPage";
+import CreateProduct from "./pages/CreateProduct";
+import EditProduct from "./pages/EditProduct";
 
 function App() {
+  const [isSubmit, setSubmit] = useState([]);
   return (
-    <div>
-      <div>
+    <>
         <BrowserRouter>
           <Routes>
-            {router.map((route, index) => {
-              return (
-                <Route
-                  path={route.path}
-                  element={route.element}
-                  key={index}
-                ></Route>
-              );
-            })}
+            <Route path="/" element={<LandingPage/>}></Route>
+            <Route path="/CreateProduct" element={<CreateProduct isSubmit={isSubmit} setSubmit={setSubmit} />}></Route>
+            <Route path="/Product/:id" element={<EditProduct isSubmit={isSubmit}/>}></Route>
           </Routes>
         </BrowserRouter>
-      </div>
-    </div>
+    </>
   );
 }
 
