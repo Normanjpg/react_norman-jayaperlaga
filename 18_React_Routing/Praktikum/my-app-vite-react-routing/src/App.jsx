@@ -5,18 +5,25 @@ import { BrowserRouter, Route, Routes } from "react-router-dom";
 import LandingPage from "./pages/LandingPage";
 import CreateProduct from "./pages/CreateProduct";
 import EditProduct from "./pages/EditProduct";
+import DataProduct from "./pages/DataProduct";
+import PrivateRoute from "./configs/PrivateRoute/PrivateRoute";
+import Login from "./pages/Login";
 
 function App() {
   const [isSubmit, setSubmit] = useState([]);
   return (
     <>
-        <BrowserRouter>
-          <Routes>
-            <Route path="/" element={<LandingPage/>}></Route>
-            <Route path="/CreateProduct" element={<CreateProduct isSubmit={isSubmit} setSubmit={setSubmit} />}></Route>
-            <Route path="/Product/:id" element={<EditProduct isSubmit={isSubmit}/>}></Route>
-          </Routes>
-        </BrowserRouter>
+      <BrowserRouter>
+        <Routes>
+          <Route path="/" element={<LandingPage />}></Route>
+          <Route path="/CreateProduct" element={<CreateProduct isSubmit={isSubmit} setSubmit={setSubmit} />}></Route>
+          <Route path="/Product/:id" element={<EditProduct isSubmit={isSubmit} />}></Route>
+          <Route path="/login" element={<Login />}></Route>
+          <Route element={<PrivateRoute user={false} />}>
+            <Route path="/DataProduct" element={<DataProduct />}></Route>
+          </Route>
+        </Routes>
+      </BrowserRouter>
     </>
   );
 }

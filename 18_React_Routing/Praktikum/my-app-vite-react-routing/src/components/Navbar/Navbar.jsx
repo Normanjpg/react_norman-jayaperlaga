@@ -49,6 +49,15 @@ const Navbar = () => {
                 </NavLink>
               </li>
               <li className="nav-item me-3">
+                <NavLink
+                  to="/DataProduct"
+                  className="nav-link active text-primary"
+                  aria-current="page"
+                >
+                  Data Product
+                </NavLink>
+              </li>
+              <li className="nav-item me-3">
                 <a
                   className="nav-link active text-primary"
                   aria-current="page"
