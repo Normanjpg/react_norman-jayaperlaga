@@ -3,7 +3,7 @@ import { render, screen, fireEvent, waitFor } from "@testing-library/react";
 import ConvertCurrencyPages from "./ConvertCurrencyPages";
 
 test("should convert currency", async () => {
-  const { getByLabelText, getByText, getByTestId } = render(
+  const { getByText, getByTestId } = render(
     <ConvertCurrencyPages />
   );
 
