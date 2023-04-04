@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Bootstrap demo</title>
+    <!-- Link Bootstrap -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD"
+      crossorigin="anonymous"
+    />
+    <!-- Link css -->
+    <link rel="stylesheet" href="assets/css/style.css" />
+    <!-- Link font -->
+  </head>
+  <body>
+    <!-- Navigation Bar -->
+    <nav class="navbar navbar-expand-lg shadow-sm">
+      <div class="container-fluid">
+        <a class="navbar-brand ms-4" href="#" style="font-weight: bolder"
+          >Simple Header</a
+        >
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNav"
+          aria-controls="navbarNav"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div
+          class="collapse navbar-collapse justify-content-end"
+          id="navbarNav"
+        >
+          <ul class="navbar-nav me-4">
+            <li class="nav-item me-3">
+              <a
+                class="nav-link active text-white"
+                style="background-color: #0d6efd; border-radius: 4px"
+                aria-current="page"
+                href="#"
+                >Home</a
+              >
+            </li>
+            <li class="nav-item me-3">
+              <a
+                class="nav-link active text-primary"
+                aria-current="page"
+                href="#"
+                >Feature</a
+              >
+            </li>
+            <li class="nav-item me-3">
+              <a
+                class="nav-link active text-primary"
+                aria-current="page"
+                href="#"
+                >Pricing</a
+              >
+            </li>
+            <li class="nav-item me-3">
+              <a
+                class="nav-link active text-primary"
+                aria-current="page"
+                href="#"
+                >FAQs</a
+              >
+            </li>
+            <li class="nav-item me-3">
+              <a
+                class="nav-link active text-primary"
+                aria-current="page"
+                href="#"
+                >About</a
+              >
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <!-- Create Product Title -->
+    <div class="container text-center pt-5">
+      <div>
+        <img src="assets/img/bootstrap-logo.png" alt="bootstrap-logo" />
+      </div>
+      <div>
+        <h1>Create Product</h1>
+        <p>
+          Below is an example form built entirely with Bootstraps form controls.
+          Each required form group has a validation state that can be triggered
+          by attempting to submit the form without completing it.
+        </p>
+      </div>
+    </div>
+    <!-- Main form Create Product  -->
+    <section class="row container mx-auto w-75 pb-5">
+      <h2>Detail Product</h2>
+
+      <form id="form" novalidate class="needs-validation">
+        <div class="col-12 mb-3">
+          <label for="product-name" class="form-label">Product Name</label>
+          <input
+            type="text"
+            class="form-control"
+            id="product-name"
+            name="product-name"
+            required
+            onchange="checkSubmitButton()"
+          />
+          <!-- <span id="name-error" class="text-danger"
+            >Mohon masukan nama valid</span
+          >
+          <span id="name-success" class="text-success">Nama Valid</span> -->
+        </div>
+
+        <div class="col-12 mb-3">
+          <label for="product-category" class="form-label" id="selector"
+            >Product Category</label
+          >
+          <select
+            class="form-select"
+            id="product-category"
+            name="product-category"
+            required
+            onchange="checkSubmitButton()"
+          >
+            <option disabled selected value="Choose" style="display: none">
+              -- Choose --
+            </option>
+            <option value="Product Organic">Product Organic</option>
+            <option value="Product Non-Organic">Product Non-Organic</option>
+          </select>
+          <!-- <span id="category-error" class="text-danger"
+            >Category belum dipilih</span
+          >
+          <span id="category-success" class="text-success"
+            >Category terpilih</span
+          > -->
+        </div>
+
+        <div class="col-12 mb-3 custom-file-button">
+          <label for="product-image" class="form-label">Image Of Product</label>
+          <input
+            class="form-control"
+            type="file"
+            id="product-image"
+            name="product-image"
+            accept="image/*"
+            required
+            onchange="checkSubmitButton()"
+          />
+          <!-- <span id="image-error" class="text-danger">Mohon Pilih Gambar</span>
+          <span id="image-success" class="text-success">Gambar tersimpan</span> -->
+        </div>
+
+        <div class="col-12 mb-3">
+          <label class="form-label">Product Freshness</label>
+
+          <div class="form-check">
+            <input
+              class="form-check-input"
+              type="radio"
+              name="product-freshness"
+              id="brand-new"
+              value="Brand New"
+              required
+              onchange="checkSubmitButton()"
+            />
+            <label class="form-check-label" for="brand-new"> Brand New </label>
+          </div>
+          <div class="form-check">
+            <input
+              class="form-check-input"
+              type="radio"
+              name="product-freshness"
+              id="second-hand"
+              value="Second Hand"
+              required
+              onchange="checkSubmitButton()"
+            />
+            <label class="form-check-label" for="second-hand">
+              Second Hand
+            </label>
+          </div>
+          <div class="form-check">
+            <input
+              class="form-check-input"
+              type="radio"
+              name="product-freshness"
+              id="refurbisned"
+              value="Refurbisned"
+              required
+              onchange="checkSubmitButton()"
+            />
+            <label class="form-check-label" for="refurbisned">
+              Refurbisned
+            </label>
+          </div>
+          <!-- <span id="radio-error" class="text-danger">Mohon pilih</span>
+          <span id="radio-success" class="text-success">Pilihan tersimpan</span> -->
+        </div>
+
+        <div class="col-12 mb-3">
+          <label for="formDesc" class="form-label"
+            >Additional Description</label
+          >
+          <textarea
+            class="form-control"
+            placeholder="Leave a comment here"
+            id="formDesc"
+            name="formDesc"
+            required
+            onchange="checkSubmitButton()"
+          ></textarea>
+          <!-- <span id="desc-error" class="text-danger">Masukan Deskripsi</span>
+          <span id="desc-success" class="text-success"
+            >Deskripsi tersimpan</span
+          > -->
+        </div>
+
+        <div class="col-12 mb-3">
+          <label for="product-price" class="form-label">Product Price</label>
+          <div class="input-group">
+            <div class="input-group-prepend">
+              <span class="input-group-text">$</span>
+            </div>
+            <input
+              type="number"
+              class="form-control"
+              id="product-price"
+              name="product-price"
+              required
+              onchange="checkSubmitButton()"
+              placeholder="1"
+            />
+          </div>
+          <!-- <span id="price-error" class="text-danger"
+            >Mohon masukan harga produk</span
+          >
+          <span id="price-success" class="text-success"
+            >Harga produk valid</span
+          > -->
+        </div>
+
+        <div class="mt-5 text-center">
+          <button
+            type="submit"
+            id="submit-button"
+            class="btn btn-primary"
+            style="width: 557px"
+            
+          >
+            Submit
+          </button>
+        </div>
+      </form>
+    </section>
+
+    <!-- Table -->
+    <div class="container">
+
+      <div class="row">
+        <div>
+          <h2>List of Product</h2>
+        </div>
+        <table class="table table-striped table-bordered" id="table-product">
+          <tr>
+            <th>No.</th>
+            <th>Product Name</th>
+            <th>Product Category</th>
+            <th>Image of Product</th>
+            <th>Product Freshness</th>
+            <th>Additional Description</th>
+            <th>Product Price</th>
+          </tr>
+        </table>
+      </div>
+
+      <form>
+        <div class="text-center mt-4">
+          <input
+            type="text"
+            id="search"
+            placeholder="Search Product by Name ..."
+          />
+          <button id="delete-button" type="button" class="btn btn-danger btn-sm">
+            Delete
+          </button>
+          <button id="search-button" type="button" class="btn btn-primary btn-sm">
+            Search
+          </button>
+        </div>
+
+      </form>
+    </div>
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
+      crossorigin="anonymous"
+    ></script>
+    <script src="assets/js/jstable.js"></script>
+  </body>
+</html>
