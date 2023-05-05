@@ -1,0 +1,35 @@
+.selector-for-some-widget {
+    box-sizing: content-box;
+  }
+
+  .navbar-collapse {
+    padding: 10px;
+    border-radius: 10px;
+  }
+  
+  .navbar-nav li {
+    margin: 0 10px;
+  }
+  
+  .navbar-nav li a:hover {
+    background-color: #f0ad4e;
+    border-radius: 20%;
+  }
+
+  .navbar-nav ul li a:hover {
+    color: #f0ad4e;
+    background-color: white;
+  }
+  
+  .navbar {
+    position: fixed;
+    top: 0;
+    width: 100%;
+  }
+  
+  
+  @media (max-width: 991.98px) {
+    .navbar:not(.show) {
+      position: absolute;
+    }
+  }
