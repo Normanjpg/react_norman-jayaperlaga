@@ -5,7 +5,7 @@
 https://tiresome-town.surge.sh/
 
 # Website Vercel
-
+https://my-app-vite-react-form-authentication-in-react-deploy.vercel.app/
 
 ## Build React App
 Build dilakukan karena secara default React mengandung banyak pesan peringatan. peringatan-peringatan ini berguna dalam development (pengembangan aplikasi). Namun, karena itu juga membuat React menjadi lebih berat dan lambat. sehingga kita harus menggunakan versi Build(produksi) ketika akan mendeploy aplikasi React kita. Tujuan dilakukan Build ini agar aplikasi buatan kita menjadi versi produksi dimana pada versi ini performanya lebih ringan dan cepat dibandingkan versi developmentnya.
